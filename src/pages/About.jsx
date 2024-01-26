@@ -18,6 +18,35 @@ function about() {
   }, []);
   return (
     <div className="cards">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <Link to={"/quadb/"} className="navbar-brand">
+            Quadb
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <Link
+                to={"/quadb/"}
+                className="nav-link active"
+                aria-current="page"
+              >
+                Home
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
       {[data] &&
         [data].map((dataObj) => {
           return (

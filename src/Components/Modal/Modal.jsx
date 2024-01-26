@@ -59,6 +59,35 @@ export default function Modal() {
 
   return (
     <>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <Link to={"/quadb/"} className="navbar-brand">
+            Quadb
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <Link
+                to={"/quadb/"}
+                className="nav-link active"
+                aria-current="page"
+              >
+                Home
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
       <div className="cards">
         {[data] &&
           [data].map((dataObj) => {
@@ -79,99 +108,103 @@ export default function Modal() {
                   <h5 className="card-title">
                     Name of the show: {dataObj.name}
                   </h5>
-                  <form class="row g-3" onSubmit={handleSubmit}>
-                    <div class="col-md-6">
-                      <label for="inputName4" class="form-label">
+                  <form className="row g-3" onSubmit={handleSubmit}>
+                    <div className="col-md-6">
+                      <label for="inputName4" className="form-label">
                         Name
                       </label>
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         id="inputName4"
                         onChange={(e) => setName(e.target.value)}
                         value={name}
                       />
                     </div>
-                    <div class="col-md-6">
-                      <label for="inputEmail4" class="form-label">
+                    <div className="col-md-6">
+                      <label for="inputEmail4" className="form-label">
                         E-mail
                       </label>
                       <input
                         type="email"
-                        class="form-control"
+                        className="form-control"
                         id="inputEmail4"
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                       />
                     </div>
-                    <div class="col-12">
-                      <label for="inputAddress" class="form-label">
+                    <div className="col-12">
+                      <label for="inputAddress" className="form-label">
                         Seat No.
                       </label>
                       <input
                         type="number"
-                        class="form-control"
+                        className="form-control"
                         id="inputAddress"
                         placeholder="1-80"
                         onChange={(e) => setSeatno(e.target.value)}
                         value={seatno}
                       />
                     </div>
-                    <div class="col-12">
-                      <label for="inputAddress2" class="form-label">
+                    <div className="col-12">
+                      <label for="inputAddress2" className="form-label">
                         Date
                       </label>
                       <input
                         type="date"
-                        class="form-control"
+                        className="form-control"
                         id="inputAddress2"
                         placeholder="Apartment, studio, or floor"
                         onChange={(e) => setDate(e.target.value)}
                         value={date}
                       />
                     </div>
-                    <div class="col-md-6">
-                      <label for="inputCity" class="form-label">
+                    <div className="col-md-6">
+                      <label for="inputCity" className="form-label">
                         Time
                       </label>
                       <input
                         type="time"
-                        class="form-control"
+                        className="form-control"
                         id="inputCity"
                         onChange={(e) => setTime(e.target.value)}
                         value={time}
                       />
                     </div>
-                    <div class="col-md-4">
-                      <label for="inputState" class="form-label">
+                    <div className="col-md-4">
+                      <label for="inputState" className="form-label">
                         State
                       </label>
-                      <select id="inputState" class="form-select">
+                      <select id="inputState" className="form-select">
                         <option selected>Choose...</option>
                         <option>Punjab</option>
                         <option>New Delhi</option>
                       </select>
                     </div>
-                    <div class="col-md-2">
-                      <label for="inputZip" class="form-label">
+                    <div className="col-md-2">
+                      <label for="inputZip" className="form-label">
                         Zip
                       </label>
-                      <input type="text" class="form-control" id="inputZip" />
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="inputZip"
+                      />
                     </div>
-                    <div class="col-12">
-                      <div class="form-check">
+                    <div className="col-12">
+                      <div className="form-check">
                         <input
-                          class="form-check-input"
+                          className="form-check-input"
                           type="checkbox"
                           id="gridCheck"
                         />
-                        <label class="form-check-label" for="gridCheck">
+                        <label className="form-check-label" for="gridCheck">
                           I agree with the T&C
                         </label>
                       </div>
                     </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn btn-primary">
+                    <div className="col-12">
+                      <button type="submit" className="btn btn-primary">
                         Submit
                       </button>
                     </div>
