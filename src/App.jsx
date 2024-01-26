@@ -8,9 +8,9 @@ import Modal from "./Components/Modal/Modal";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/About/:id" element={<About />} />
-      <Route path="/About/:id/Modal/:id" element={<Modal />} />
+      <Route path="/quadb/" element={<Home />} />
+      <Route path="/quadb/About/:id" element={<About />} />
+      <Route path="/quadb/About/:id/Modal/:id" element={<Modal />} />
     </Routes>
   );
 }
