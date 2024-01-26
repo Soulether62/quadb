@@ -52,8 +52,8 @@ function home() {
           return (
             <div
               className="card bg-dark text-light mb-3 d-inline-block my-3 mx-3 px-2 py-2"
-              style={{ width: "25rem" }}
               key={dataObj.show.id}
+              style={{ width: "25rem" }}
             >
               <img
                 className="card-img-top"
@@ -77,7 +77,6 @@ function home() {
                 <Link
                   className="btn btn-primary"
                   to={`About/${dataObj.show.id}`}
-                  style={{ color: "black" }}
                 >
                   Summary
                 </Link>

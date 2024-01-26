@@ -58,7 +58,7 @@ export default function Modal() {
   }, [udatas]);
 
   return (
-    <>
+    <div className="cards">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <Link to={"/quadb/"} className="navbar-brand">
@@ -88,13 +88,12 @@ export default function Modal() {
           </div>
         </div>
       </nav>
-      <div className="cards">
-        {[data] &&
-          [data].map((dataObj) => {
-            return (
+      {[data] &&
+        [data].map((dataObj) => {
+          return (
+            <div className="container">
               <div
-                className="card bg-dark text-light mb-3 d-inline-block my-3 mx-3 px-2 py-2"
-                style={{ width: "90vw" }}
+                className="card bg-dark text-light mb-3 d-inline-block my-3 mx-3 px-5 py-5"
                 key={dataObj.id}
               >
                 <img
@@ -110,7 +109,7 @@ export default function Modal() {
                   </h5>
                   <form className="row g-3" onSubmit={handleSubmit}>
                     <div className="col-md-6">
-                      <label for="inputName4" className="form-label">
+                      <label htmlFor="inputName4" className="form-label">
                         Name
                       </label>
                       <input
@@ -122,7 +121,7 @@ export default function Modal() {
                       />
                     </div>
                     <div className="col-md-6">
-                      <label for="inputEmail4" className="form-label">
+                      <label htmlFor="inputEmail4" className="form-label">
                         E-mail
                       </label>
                       <input
@@ -134,7 +133,7 @@ export default function Modal() {
                       />
                     </div>
                     <div className="col-12">
-                      <label for="inputAddress" className="form-label">
+                      <label htmlFor="inputAddress" className="form-label">
                         Seat No.
                       </label>
                       <input
@@ -147,7 +146,7 @@ export default function Modal() {
                       />
                     </div>
                     <div className="col-12">
-                      <label for="inputAddress2" className="form-label">
+                      <label htmlFor="inputAddress2" className="form-label">
                         Date
                       </label>
                       <input
@@ -160,7 +159,7 @@ export default function Modal() {
                       />
                     </div>
                     <div className="col-md-6">
-                      <label for="inputCity" className="form-label">
+                      <label htmlFor="inputCity" className="form-label">
                         Time
                       </label>
                       <input
@@ -172,17 +171,17 @@ export default function Modal() {
                       />
                     </div>
                     <div className="col-md-4">
-                      <label for="inputState" className="form-label">
+                      <label htmlFor="inputState" className="form-label">
                         State
                       </label>
                       <select id="inputState" className="form-select">
-                        <option selected>Choose...</option>
+                        <option value={"selected"}>Choose...</option>
                         <option>Punjab</option>
                         <option>New Delhi</option>
                       </select>
                     </div>
                     <div className="col-md-2">
-                      <label for="inputZip" className="form-label">
+                      <label htmlFor="inputZip" className="form-label">
                         Zip
                       </label>
                       <input
@@ -198,7 +197,7 @@ export default function Modal() {
                           type="checkbox"
                           id="gridCheck"
                         />
-                        <label className="form-check-label" for="gridCheck">
+                        <label className="form-check-label" htmlFor="gridCheck">
                           I agree with the T&C
                         </label>
                       </div>
@@ -211,9 +210,9 @@ export default function Modal() {
                   </form>
                 </div>
               </div>
-            );
-          })}
-      </div>
-    </>
+            </div>
+          );
+        })}
+    </div>
   );
 }
