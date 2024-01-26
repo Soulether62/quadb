@@ -23,7 +23,7 @@ function home() {
           return (
             <div
               className="card bg-dark text-light mb-3 d-inline-block my-3 mx-3 px-2 py-2"
-              style={{ width: "18rem" }}
+              style={{ width: "25rem" }}
               key={dataObj.show.id}
             >
               <img
